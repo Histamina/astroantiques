@@ -1,4 +1,4 @@
-<header class="header-container px-12 py-3">
+<header class="header-container py-3">
   <nav>
     <div class="social-wrapper">
       <a>Whatsapp</a>
@@ -7,7 +7,7 @@
     </div>
     <div class="navbar-wrapper">
       <div>
-        <a>LOGO</a>
+        <a>Antiguedades Adrian</a>
       </div>
       <div class="ancor-items">
         <a>Nosotros</a>
@@ -25,24 +25,30 @@
     border-bottom: 1px solid #333333;
     position: sticky;
     top: 0;
+    display: flex;
+    justify-content: center;
 
     a {
       color: white;
     }
 
-    .social-wrapper {
-      display: flex;
-      justify-content: flex-end;
-      gap: 15px;
-    }
-
-    .navbar-wrapper {
-      display: flex;
-      justify-content: space-between;
-
-      .ancor-items {
-        display: inherit;
+    nav {
+      width: 87%;
+      
+      .social-wrapper {
+        display: flex;
+        justify-content: flex-end;
         gap: 15px;
+      }
+  
+      .navbar-wrapper {
+        display: flex;
+        justify-content: space-between;
+  
+        .ancor-items {
+          display: inherit;
+          gap: 15px;
+        }
       }
     }
   }

@@ -3,6 +3,7 @@ interface Props {
 	title: string;
 }
 import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
 
 const { title } = Astro.props;
 ---
@@ -20,6 +21,7 @@ const { title } = Astro.props;
 	<body>
 		<div id="app" class="relative">
 			<Header />
+			<Hero />
 			<!-- <aside class="[grid-area:aside] flex-col flex overflow-y-auto bg-blue-100">
 				ASIDE
 			</aside>
@@ -37,17 +39,16 @@ const { title } = Astro.props;
 </html>
 <style>
 	#app {
-		/* display: grid;
-		grid-template-areas:
-			"aside main main"
-			"player player player";
-		grid-template-columns: 350px 1fr;
-		grid-template-rows: 1fr auto; */
+		min-height: 100vh;
 	}
 </style>
 <style is:global>
 	html {
 		font-family: system-ui, sans-serif;
 		background: #13151a;
+	}
+
+	body {
+		overflow-x: hidden;
 	}
 </style>
