@@ -7,7 +7,7 @@ import statue from '../images/statue.webp';
 <div class="hero-container">
   <div class="main-wrapper">
     <div class="leyend-container">
-      <div class="card px-6 py-8">
+      <div class="card px-6 pb-4">
         <h2 class="mb-5">
           Tasaciones a domicilio <br>
           <color>sin cargo</color>
@@ -32,14 +32,16 @@ import statue from '../images/statue.webp';
 <style>
   .hero-container {
     background-image: linear-gradient(to bottom, #000000, #292929, #535252, #908f8d, #dadada);
-    height: 90vh;
+    height: fit-content;
     color: white;
+    padding-top: 60px;
 
     .main-wrapper {
       width: 90%;
       margin: auto;
       display: flex;
       justify-content: space-between;
+      align-items: flex-end;
       height: inherit;
 
       .leyend-container {
@@ -51,9 +53,6 @@ import statue from '../images/statue.webp';
         
         .card {
           width: fit-content;
-          /* background-color: rgb(152 152 152); */
-          /* border-radius: 6px; */
-          /* box-shadow: 0px 1px 11px 0px rgb(82, 82, 82); */
 
           h2 {
             font-size: 60px;
@@ -83,7 +82,7 @@ import statue from '../images/statue.webp';
         align-items: center;
 
         img {
-          width: 58vh;
+          width: 50vh;
         }
       }
     }
