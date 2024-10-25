@@ -1,11 +1,17 @@
 <header class="header-container py-3">
   <nav>
     <div class="social-wrapper">
-      <a>Whatsapp</a>
-      <a>Instagram</a>
-      <a>Facebook</a>
+      <a href="https://wa.me/5491157681480" target="_blank" rel="noopener noreferrer nofollow">
+        <i class="mdi mdi-whatsapp" aria-hidden="true"></i>&nbsp;+54 9 11 5768-1480
+      </a>
+      <a href="https://www.instagram.com/antiguedadesadrian/" target="_blank" rel="noopener noreferrer nofollow">
+        <i class="mdi mdi-instagram" aria-hidden="true"></i>&nbsp;@antiguedadesadrian
+      </a>
+      <a href="https://www.facebook.com/adrian.gomez.35574" target="_blank" rel="noopener noreferrer nofollow">
+        <i class="mdi mdi-facebook" aria-hidden="true"></i>&nbsp;Antiguedades Adrian
+      </a>
     </div>
-    <div class="navbar-wrapper">
+    <div class="navbar-wrapper mt-5">
       <div>
         <a>Antiguedades Adrian</a>
       </div>
@@ -30,6 +36,9 @@
 
     a {
       color: white;
+      font-size: 16px;
+      line-height: 18px;
+      display: flex;
     }
 
     nav {
@@ -39,6 +48,23 @@
         display: flex;
         justify-content: flex-end;
         gap: 15px;
+
+        .mdi {
+          font-size: 20px;
+        }
+
+        a:first-child:hover {
+          color: #25D366;
+          
+        }
+        a:nth-child(2):hover {
+          color: #D62976;
+          
+        }
+        a:nth-child(3):hover {
+          color: #3B5998;
+          
+        }
       }
   
       .navbar-wrapper {
