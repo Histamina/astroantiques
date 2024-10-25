@@ -6,13 +6,16 @@ import PocketWatchResized from '../images/PocketWatchResized.png';
 <div class="hero-container">
   <div class="main-wrapper">
     <div class="leyend-container">
-      <h2>
-        Tasaciones a domicilio <br>
-        sin cargo
-      </h2>
-      <button>
-        Contacto
-      </button>
+      <div class="card px-6 py-8">
+        <h2 class="mb-4">
+          Tasaciones a domicilio <br>
+          sin cargo
+        </h2>
+        <p>Al mejor precio del mercado</p>
+        <button class="rounded-md bg-primary px-7 py-4 mt-8">
+          Contáctenos
+        </button>
+      </div>
     </div>
     <div class="image-container">
       <Image
@@ -32,27 +35,44 @@ import PocketWatchResized from '../images/PocketWatchResized.png';
     color: white;
 
     .main-wrapper {
-      width: 87%;
+      width: 70%;
       margin: auto;
       display: flex;
       justify-content: space-between;
       height: inherit;
 
       .leyend-container {
-        flex: 0 0 40%;
+        flex: 0 0 70%;
         height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        
+        .card {
+          width: fit-content;
+          /* background-color: rgb(152 152 152); */
+          /* border-radius: 6px; */
+          /* box-shadow: 0px 1px 11px 0px rgb(82, 82, 82); */
 
-        h2 {
-          font-size: 40px;
-          line-height: 44px;
+          h2 {
+            font-size: 56px;
+            line-height: 60px;
+            font-family: 'WorkSansRegular';
+          }
+          p {
+            font-family: 'WorkSansRegular';
+            font-size: 25px;
+            line-height: 30px;
+          }
+
+          button {
+            background-color: #f2cc44;
+          }
         }
       }
 
       .image-container {
-        flex: 0 0 50%;
+        flex: 0 0 30%;
         display: inherit;
         justify-content: flex-end;
         align-items: center;
