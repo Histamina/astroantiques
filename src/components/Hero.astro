@@ -7,7 +7,7 @@ import statue from '../images/statue.webp';
 <div class="hero-container">
   <div class="main-wrapper">
     <div class="leyend-container">
-      <div class="card px-6 pb-4">
+      <div class="card px-6">
         <h2 class="mb-5">
           Tasaciones a domicilio <br>
           <color>sin cargo</color>
@@ -31,17 +31,20 @@ import statue from '../images/statue.webp';
 
 <style>
   .hero-container {
-    background-image: linear-gradient(to bottom, #000000, #292929, #535252, #908f8d, #dadada);
-    height: fit-content;
+    /* background-image: linear-gradient(to bottom, #000000, #292929, #535252, #908f8d, #dadada); */
+    background-image: url('../images/blackbackground.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
     color: white;
-    padding-top: 60px;
+    /* padding-top: 60px; */
 
     .main-wrapper {
       width: 90%;
       margin: auto;
       display: flex;
       justify-content: space-between;
-      align-items: flex-end;
+      align-items: center;
       height: inherit;
 
       .leyend-container {
@@ -59,7 +62,7 @@ import statue from '../images/statue.webp';
             line-height: 64px;
             font-family: 'PoppinsMedium';
             color {
-              color: #f8c201;
+              color: #E6AF6A;
             }
           }
           p {
@@ -69,8 +72,9 @@ import statue from '../images/statue.webp';
           }
 
           button {
-            background-color: #f8c201;
+            background-color: #E6AF6A;
             font-family: 'PoppinsRegular';
+            color: black;
           }
         }
       }
