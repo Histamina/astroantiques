@@ -12,39 +12,43 @@ import card9 from '../images/card9.jpg';
 const cards = [
   {
     path: card1,
-    alt: 'Silla antigüa'
+    alt: 'Silla antigüa',
+    title: 'Muebles antigüos',
   },
   {
     path: card2,
-    alt: 'Escultura'
+    alt: 'Escultura',
+    title: 'Esculturas',
   },
   {
     path: card3,
-    alt: 'Jarras de porcelana'
-  },
-  {
-    path: card4,
-    alt: 'Jarrón de arte oriental'
+    alt: 'Jarras de porcelana',
+    title: 'Adornos de Vitrina / Cristalería'
   },
   {
     path: card5,
-    alt: 'Jarrón de vidrio'
+    alt: 'Jarrón de vidrio',
+    title: 'Arte oriental'
   },
   {
     path: card6,
-    alt: 'Reloj antigüo'
+    alt: 'Reloj antigüo',
+    title: 'Relojes',
   },
   {
     path: card7,
-    alt: 'Jarra de plata'
+    alt: 'Jarra de plata',
+    title: 'Platería',
   },
   {
     path: card8,
-    alt: 'Juego de porcelana'
+    alt: 'Juego de porcelana',
+    title: 'Vajilla',
   },
   {
     path: card9,
-    alt: 'Misceláneo'
+    alt: 'Misceláneo',
+    title: 'Misceláneos',
   },
 ];
 ---
@@ -52,50 +56,21 @@ const cards = [
 
 <div class="we-buy-container">
   <div class="main-wrapper grid grid-cols-12 gap-4">
-    <div class="text-container col-span-4 xs:col-span-12">
+    <div class="text-container col-span-3 xs:col-span-12">
       <h3>Compramos</h3>
     </div>
-    <div class="col-span-8 xs:col-span-12">
+    <div class="col-span-9 xs:col-span-12">
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
-      {
-        cards.map((item, index) => {
-          return (
+        {cards.map((item) => (
           <div class="max-w-sm rounded overflow-hidden shadow-lg">
-            <img class="w-full" src={item.path.src} alt={item.alt} />
+            <div class="h-64 overflow-hidden">
+              <img class="w-full h-full object-cover" src={item.path.src} alt={item.alt} />
+            </div>
             <div class="px-6 py-4">
-              <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
-              <p class="text-gray-700 text-base">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
-              </p>
+              <div class="font-bold text-xl mb-2">{item.title}</div>
             </div>
           </div>
-          )
-        })
-      }
-        <!-- <div class="col-span-1">
-          <img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d" alt="Imagen 1" class="w-full h-auto">
-        </div>
-        <div class="col-span-1">
-          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330" alt="Imagen 2" class="w-full h-auto">
-        </div>
-        <div class="col-span-1">
-          <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e" alt="Imagen 3" class="w-full h-auto">
-        </div>
-        <div class="col-span-1">
-          <img src="https://images.unsplash.com/photo-1516707891915-9d5a6a2a1d4f" alt="Imagen 4" class="w-full h-auto">
-        </div>
-        <div class="col-span-2">
-          <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0" alt="Imagen 5" class="w-full h-auto">
-        </div>
-        <div class="col-span-1">
-          <img src="https://images.unsplash.com/photo-1517487881594-2787fef5ebf7" alt="Imagen 6" class="w-full h-auto">
-        </div>
-        <div class="col-span-1">
-          <img src="https://images.unsplash.com/photo-1504198453319-5ce911bafcde" alt="Imagen 7" class="w-full h-auto">
-        </div>
-        <div class="col-span-3">
-          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Imagen 8" class="w-full h-auto">
-        </div> -->
+        ))}
       </div>
     </div>
   </div>
@@ -104,9 +79,11 @@ const cards = [
 
 
 
+
 <style>
   .we-buy-container {
-    background-color: #F1F1F1;
+    background: rgb(255,255,255);
+/* background: linear-gradient(0deg, rgba(255,255,255,1) 30%, rgba(230,175,106,1) 100%, rgba(222,133,21,1) 100%); */
     padding: 140px 0;
   }
   .main-wrapper {
