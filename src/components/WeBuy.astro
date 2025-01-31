@@ -1,3 +1,55 @@
+---
+import card1 from '../images/card1.jpg';
+import card2 from '../images/card2.jpg';
+import card3 from '../images/card3.jpg';
+import card4 from '../images/card4.jpg';
+import card5 from '../images/card5.jpg';
+import card6 from '../images/card6.jpg';
+import card7 from '../images/card7.jpg';
+import card8 from '../images/card8.jpg';
+import card9 from '../images/card9.jpg';
+
+const cards = [
+  {
+    path: card1,
+    alt: 'Silla antigüa'
+  },
+  {
+    path: card2,
+    alt: 'Escultura'
+  },
+  {
+    path: card3,
+    alt: 'Jarras de porcelana'
+  },
+  {
+    path: card4,
+    alt: 'Jarrón de arte oriental'
+  },
+  {
+    path: card5,
+    alt: 'Jarrón de vidrio'
+  },
+  {
+    path: card6,
+    alt: 'Reloj antigüo'
+  },
+  {
+    path: card7,
+    alt: 'Jarra de plata'
+  },
+  {
+    path: card8,
+    alt: 'Juego de porcelana'
+  },
+  {
+    path: card9,
+    alt: 'Misceláneo'
+  },
+];
+---
+
+
 <div class="we-buy-container">
   <div class="main-wrapper grid grid-cols-12 gap-4">
     <div class="text-container col-span-4 xs:col-span-12">
@@ -5,7 +57,22 @@
     </div>
     <div class="col-span-8 xs:col-span-12">
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
-        <div class="col-span-1">
+      {
+        cards.map((item, index) => {
+          return (
+          <div class="max-w-sm rounded overflow-hidden shadow-lg">
+            <img class="w-full" src={item.path.src} alt={item.alt} />
+            <div class="px-6 py-4">
+              <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
+              <p class="text-gray-700 text-base">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+              </p>
+            </div>
+          </div>
+          )
+        })
+      }
+        <!-- <div class="col-span-1">
           <img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d" alt="Imagen 1" class="w-full h-auto">
         </div>
         <div class="col-span-1">
@@ -28,7 +95,7 @@
         </div>
         <div class="col-span-3">
           <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Imagen 8" class="w-full h-auto">
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
