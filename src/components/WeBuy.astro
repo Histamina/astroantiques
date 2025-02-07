@@ -1,5 +1,5 @@
 ---
-import card1 from '../images/card1.jpg';
+import card1 from '../images/buys/card1.jpg';
 import card2 from '../images/card2.jpg';
 import card3 from '../images/card3.jpg';
 import card4 from '../images/card4.jpg';
@@ -12,8 +12,9 @@ import card9 from '../images/card9.jpg';
 const cards = [
   {
     path: card1,
-    alt: 'Silla antigüa',
-    title: 'Muebles antigüos',
+    alt: 'Platería',
+    title: 'Platería',
+    colSpan: ''
   },
   {
     path: card2,
@@ -55,23 +56,22 @@ const cards = [
 
 
 <div class="we-buy-container">
-  <div class="main-wrapper grid grid-cols-12 gap-4">
-    <div class="text-container col-span-3 xs:col-span-12">
-      <h3>Compramos</h3>
+  <div class="main-wrapper">
+    <div class="text-container">
+      <h3 class="text-center pb-5">Compramos</h3>
     </div>
-    <div class="col-span-9 xs:col-span-12">
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
-        {cards.map((item) => (
-          <div class="max-w-sm rounded overflow-hidden shadow-lg">
-            <div class="h-64 overflow-hidden">
-              <img class="w-full h-full object-cover" src={item.path.src} alt={item.alt} />
-            </div>
-            <div class="px-6 py-4">
-              <div class="font-bold text-xl mb-2">{item.title}</div>
-            </div>
+    <div class="grid grid-cols-3 gap-3">
+    {
+      cards.map((item) => (
+        <div
+          class="col-span-1 max-w-sm rounded overflow-hidden shadow-lg"
+        >
+          <div class="overflow-hidden">
+            <img class="w-full h-full object-cover" src={item.path.src} alt={item.alt} />
           </div>
-        ))}
-      </div>
+        </div>
+        ))
+    }  
     </div>
   </div>
 </div>
